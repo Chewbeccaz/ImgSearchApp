@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+.searchify-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchify-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+}
+
+.label-box {
+  background-color: #a7cffa;
+  width: 100%;
+  margin: 12px;
+  min-height: 45px;
+}
+
+h1,
+h2 {
+  color: #14464b;
+  font-family: "Abril Fatface", cursive;
+}
