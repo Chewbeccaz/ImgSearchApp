@@ -35,6 +35,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { UserFavorites } from "./UserFavorites";
+import searchifyImage from "../images/Searchify.png";
+import "../styles/imgsearchapp.css";
 
 export const ImgSearchApp = () => {
   //Här kan man också hämta ut annat om man vill.
@@ -85,7 +87,17 @@ export const ImgSearchApp = () => {
         </>
       ) : (
         <>
-          <h2>Vänligen logga in</h2>
+          <div className="searchify-wrapper">
+            <div className="text-wrapper">
+              <h1>Searchify</h1>
+              <div className="label-box">
+                <h2>Find it. Save it. Love it.</h2>
+              </div>
+            </div>
+            <div className="searchify-img">
+              <img src={searchifyImage} alt="Searchify image" />
+            </div>
+          </div>
           <LoginButton />
         </>
       )}
