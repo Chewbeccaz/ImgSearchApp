@@ -1,0 +1,16 @@
+nav {
+  margin-right: 16px;
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.7rem;
+  }
+
+  li {
+    .active {
+      border-bottom: 1px solid #b39c41;
+    }
+  }
+}
