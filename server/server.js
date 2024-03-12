@@ -31,7 +31,7 @@ app.get("/users/:userId/favorites", async (req, res) => {
   console.log(`Hämtar ${userId} s favoritbilder:`);
   try {
     const userData = await readFile("users.json", "utf-8");
-    const user = JSON.parse(userData);
+    const users = JSON.parse(userData);
     const userFavorites = users.find(
       (user) => user.userId === userId
     )?.favorites;
