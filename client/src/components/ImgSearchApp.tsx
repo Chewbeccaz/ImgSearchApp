@@ -32,14 +32,21 @@ import LogoutButton from "./LogoutButton";
 import LoginButton from "./LoginButton";
 import SearchBox from "./SearchBox";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { UserFavorites } from "./UserFavorites";
+
 export const ImgSearchApp = () => {
   //Här kan man också hämta ut annat om man vill.
   //{isAuthenticated, user, isLoading}
 
   //Här kan man komma åt user med.
   const { isAuthenticated, user } = useAuth0();
+  const [showFavorites, setShowFavorites] = useState(false);
 
-  //   return isAuthenticated ? <LogoutButton /> : <LoginButton />;
+  const toggleFavorites = () => {
+    setShowFavorites(!showFavorites);
+  };
 
   const testClick = async () => {
     console.log("Test1.");
@@ -68,7 +75,11 @@ export const ImgSearchApp = () => {
         <>
           <h2>Välkommen!</h2>
           <LogoutButton />
-          <SearchBox />
+          <button onClick={toggleFavorites}>
+            {showFavorites ? "Hem" : "Mina Favoriter"}
+          </button>
+          {showFavorites ? <UserFavorites /> : <SearchBox />}
+          {/* <SearchBox /> */}
           <button onClick={testClick}>Testknappen</button>
           {/* <SearchResults /> */}
         </>
