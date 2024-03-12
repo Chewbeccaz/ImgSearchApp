@@ -26,7 +26,7 @@ const getFavorites = async (userId) => {
   }
 };
 
-app.get("/user", async (req, res) => {
+app.get("/users/:userId/favorites", async (req, res) => {
   try {
     const userId = req.query.userId;
     const favorites = await getFavorites(userId);
