@@ -1,1 +1,6 @@
-[{"id":"testUser","favoriteImages":["testUrl"]},{"id":"rebeccahansson2016@gmail.com","favoriteImage":""},{"id":"rebeccahansson2016@gmail.com"},{"id":"rebeccahansson2016@gmail.com"},{"id":"rebeccahansson2016@gmail.com","favoriteImage":"https://m.media-amazon.com/images/I/91-ZQLmWkhL._AC_UF894,1000_QL80_.jpg"},{"id":"rebeccahansson2016@gmail.com","favoriteImage":"https://m.media-amazon.com/images/I/91-ZQLmWkhL._AC_UF894,1000_QL80_.jpg"},{"id":"rebeccahansson2016@gmail.com","favoriteImage":"https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/02/896/500/madonna-falls-onstage.jpg?ve=1&tl=1"}]
+[
+  {
+    "id": "rebeccahansson2016@gmail.com",
+    "favoriteImage": "https://m.media-amazon.com/images/I/71OG+mfrCBL._AC_UF894,1000_QL80_.jpg"
+  }
+]
