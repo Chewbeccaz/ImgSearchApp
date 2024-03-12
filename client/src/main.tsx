@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import "./styles/main.css";
 import "./index.css";
 import { Auth0Provider } from "@auth0/auth0-react";
-// import { RouterProvider } from "react-router-dom";
-// import { Router } from "../src/Router.tsx";
-
-// import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { Router } from "./Router";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -16,9 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       authorizationParams={{
         redirect_uri: window.location.origin,
       }}>
-      {/* <RouterProvider router={Router}> */}
-      <App />
-      {/* </RouterProvider> */}
+      <RouterProvider router={Router}></RouterProvider>
     </Auth0Provider>
   </React.StrictMode>
 );
