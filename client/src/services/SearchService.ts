@@ -10,6 +10,10 @@ export const searchImages = async (userSearch: string) => {
       }&q=${userSearch}&searchType=image&num=10`
     );
 
+    console.log("Response data:", response.data); // För att logga ut objektet
+    const formattedSearchTime =
+      response.data.searchInformation.formattedSearchTime;
+
     let suggestedSearch = "";
     if (response.data.spelling && response.data.spelling.correctedQuery) {
       suggestedSearch = response.data.spelling.correctedQuery;
@@ -19,7 +23,7 @@ export const searchImages = async (userSearch: string) => {
       link: item.link,
       title: item.title,
     }));
-    return { images, suggestedSearch };
+    return { images, suggestedSearch, searchTime: formattedSearchTime };
   } catch (error) {
     console.log("Error fetching images", error);
     throw error;
