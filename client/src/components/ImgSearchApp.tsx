@@ -1,5 +1,4 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "./LogoutButton";
 import LoginButton from "./LoginButton";
 import SearchBox from "./SearchBox";
 import searchifyImage from "../images/Searchify.png";
@@ -12,8 +11,7 @@ export const ImgSearchApp = () => {
     <div>
       {isAuthenticated ? (
         <>
-          <h1>Välkommen</h1>
-          <h2>{user?.name}</h2>
+          <h1>Searchify</h1>
           <SearchBox />
           {/* <LogoutButton /> */}
         </>

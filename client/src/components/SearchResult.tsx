@@ -21,7 +21,7 @@ export const SearchResult: React.FC<SearchResultsProps> = ({
   return (
     <>
       <div className="search-results">
-        <h2>Sökresultat</h2>
+        {/* <h2>Sökresultat</h2> */}
         {searchTime && <p>Sökningen tog {searchTime} sekunder.</p>}
         <div className="image-grid">
           {images.map((result, index) => (
