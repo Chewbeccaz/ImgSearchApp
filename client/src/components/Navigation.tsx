@@ -3,9 +3,16 @@ import "../styles/navigation.css";
 import { useAuth0 } from "@auth0/auth0-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faHeart } from "@fortawesome/free-solid-svg-icons";
+import LogoutButton from "./LogoutButton";
+import { useState } from "react";
 
 export const Navigation = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   if (isLoading) {
     return <div>Logging in...Please wait!</div>;
@@ -17,17 +24,18 @@ export const Navigation = () => {
         <nav>
           <ul>
             <li>
-              <img
-                className="profile-img"
-                src={user?.picture}
-                alt={user?.name}
-                style={{
-                  marginRight: "10px",
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                }}
-              />
+              <div className="nav-profile" onClick={toggleDropdown}>
+                <img
+                  className="profile-img"
+                  src={user?.picture}
+                  alt={user?.name}
+                />
+                {showDropdown && (
+                  <div className="dropdown-logout">
+                    <LogoutButton />
+                  </div>
+                )}
+              </div>
             </li>
             <li>
               <NavLink to="/">
