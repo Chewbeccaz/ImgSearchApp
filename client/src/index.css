@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -68,7 +69,7 @@ input {
   font-size: 1em;
   font-weight: 500;
   color: #14464b;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Playfair Display", serif;
   transition: border-color 0.25s;
 }
 
@@ -93,6 +94,14 @@ input::placeholder {
   border: none;
   cursor: pointer;
   color: white;
+}
+
+header {
+  position: relative;
+  min-height: 100px; /* Justera höjden efter behov */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (prefers-color-scheme: light) {
