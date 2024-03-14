@@ -3,6 +3,8 @@ import { SuggestedSearch } from "./SuggestedSearch";
 import { searchImages } from "../services/SearchService";
 import { Image } from "../models/Image";
 import { SearchResult } from "./SearchResult";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // import SearchResults from "./SearchResults"; //Varför måste jag importera såhär?
 
 export const SearchBox = () => {
@@ -43,15 +45,19 @@ export const SearchBox = () => {
   //Gör En ny komponent av suggestedSearch?
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={userSearch}
-          onChange={handleChange}
-          placeholder="Vad vill du söka på..."
-        />
-        <button type="submit">Sök</button>
-      </form>
+      <div className="searchbox-container">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={userSearch}
+            onChange={handleChange}
+            placeholder="Vad vill du söka på..."
+          />
+          <button type="submit" className="searchbox-submit">
+            <FontAwesomeIcon icon={faSearch} />
+          </button>
+        </form>
+      </div>
       {suggestedSearch && (
         <SuggestedSearch
           suggestedSearch={suggestedSearch}
