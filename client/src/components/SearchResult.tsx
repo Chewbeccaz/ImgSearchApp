@@ -18,10 +18,15 @@ export const SearchResult: React.FC<SearchResultsProps> = ({
     setFavoriteImage(imgUrl);
   };
 
+  const hasResults = images.length > 0;
+
+  if (!hasResults) {
+    return null;
+  }
+
   return (
     <>
       <div className="search-results">
-        {/* <h2>Sökresultat</h2> */}
         {searchTime && <p>Sökningen tog {searchTime} sekunder.</p>}
         <div className="image-grid">
           {images.map((result, index) => (

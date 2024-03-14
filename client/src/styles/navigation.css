@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 nav {
   position: fixed;
   top: 10px;
@@ -41,4 +42,11 @@ nav {
   object-fit: cover;
   border: 2px solid #a7cffa;
   cursor: pointer;
+}
+
+.welcome-user {
+  color: #14464b;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  margin-top: 10px;
 }

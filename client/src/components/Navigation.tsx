@@ -48,10 +48,12 @@ export const Navigation = () => {
                 <FontAwesomeIcon icon={faHeart} className="nav-icon-heart" />
               </NavLink>
             </li>
+            <li>
+              <p className="welcome-user">Välkommen, {user?.name}!</p>
+            </li>
           </ul>
         </nav>
       )}
-      <span>Välkommen, {user?.name}!</span>
     </>
   );
 };
