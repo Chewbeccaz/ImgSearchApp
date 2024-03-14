@@ -1,5 +1,7 @@
 nav {
-  margin-right: 16px;
+  position: fixed;
+  top: 10px;
+  left: 12px;
   ul {
     list-style: none;
     padding: 0;
@@ -17,6 +19,12 @@ nav {
 
 .nav-icon {
   font-size: 45px;
+  color: #a7cffa;
+  margin-right: 10px;
+}
+
+.nav-icon-heart {
+  font-size: 49px;
   color: #a7cffa;
   margin-right: 10px;
 }
