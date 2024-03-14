@@ -74,7 +74,7 @@ export const Navigation = () => {
               <NavLink to="/userfavorites">
                 <FontAwesomeIcon
                   icon={faHeart}
-                  className="nav-icon"
+                  className="nav-icon-heart"
                   // style={{
                   //   fontSize: "50px",
                   //   color: "a7cffa",
