@@ -35,10 +35,12 @@ body {
 h1 {
   font-size: 5em;
   line-height: 1.1;
+  font-family: "Abril Fatface", cursive;
 }
 h2 {
   font-size: 3.5em;
   line-height: 1.1;
+  font-family: "Abril Fatface", cursive;
 }
 h3 {
   font-size: 1.8em;

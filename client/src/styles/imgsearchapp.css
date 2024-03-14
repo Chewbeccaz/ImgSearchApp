@@ -14,13 +14,13 @@
   margin-bottom: 20px;
 }
 
-.magnifying-img img {
+.mag-img {
   height: 100px;
   width: auto;
   margin-bottom: 0;
 }
 
-img {
+.search-img {
   max-width: 90%;
   height: auto;
 }

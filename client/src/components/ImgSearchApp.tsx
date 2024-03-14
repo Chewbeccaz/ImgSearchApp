@@ -2,7 +2,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./LoginButton";
 import SearchBox from "./SearchBox";
 import searchifyImage from "../images/Searchify.png";
-import magnifyingImage from "../images/förstoring.png";
+import magnifyingImage from "../images/magnifying.png";
 import "../styles/imgsearchapp.css";
 
 export const ImgSearchApp = () => {
@@ -13,7 +13,11 @@ export const ImgSearchApp = () => {
       {isAuthenticated ? (
         <>
           <div className="magnifying-img">
-            <img src={magnifyingImage} alt="magnifying glass" />
+            <img
+              src={magnifyingImage}
+              className="mag-img"
+              alt="magnifying glass"
+            />
           </div>
           <h1>Searchify</h1>
           <SearchBox />
@@ -29,7 +33,11 @@ export const ImgSearchApp = () => {
               </div>
             </div>
             <div className="searchify-img">
-              <img src={searchifyImage} alt="Searchify image" />
+              <img
+                src={searchifyImage}
+                alt="Searchify image"
+                className="search-img"
+              />
             </div>
           </div>
           <LoginButton />
