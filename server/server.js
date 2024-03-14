@@ -4,6 +4,7 @@ const { readFile, writeFile } = require("fs").promises;
 
 const app = express();
 const cors = require("cors");
+const { SaveUserSchema } = require("./schemas/user.schema");
 
 app.use(cors());
 app.use(express.json());
@@ -55,6 +56,10 @@ app.get("/users/:userId/favorites", async (req, res) => {
 //OM finns, skicka in i dens array.
 //Om inte, skapa en ny array oc ny användare.
 app.post("/test", async (req, res) => {
+  const { error } = SaveUserSchema.validate(req.body);
+  if (error) {
+    return res.status(400).json(error);
+  }
   try {
     const { id: userId, favoriteImage } = req.body;
     console.log("userdata", req.body);
