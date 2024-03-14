@@ -15,7 +15,7 @@ export const ImgSearchApp = () => {
           <h1>Välkommen</h1>
           <h2>{user?.name}</h2>
           <SearchBox />
-          <LogoutButton />
+          {/* <LogoutButton /> */}
         </>
       ) : (
         <>
