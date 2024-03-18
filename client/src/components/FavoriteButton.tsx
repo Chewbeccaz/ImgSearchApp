@@ -57,7 +57,7 @@ export const FavoriteButton = ({ onClick, imgUrl }: FavoriteButtonProps) => {
     console.log("Test1.");
     try {
       const response = await axios.post(
-        "http://localhost:3000/test",
+        "http://localhost:3000/users",
         {
           id: user?.email,
           favoriteImage: imgUrl,

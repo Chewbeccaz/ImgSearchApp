@@ -6,7 +6,7 @@ import magnifyingImage from "../images/magnifying.png";
 import "../styles/imgsearchapp.css";
 
 export const ImgSearchApp = () => {
-  const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   return (
     <div>
