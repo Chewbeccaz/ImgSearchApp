@@ -55,7 +55,7 @@ app.get("/users/:userId/favorites", async (req, res) => {
 //Find för att kolla om anv finns i listan
 //OM finns, skicka in i dens array.
 //Om inte, skapa en ny array oc ny användare.
-app.post("/test", async (req, res) => {
+app.post("/users", async (req, res) => {
   const { error } = SaveUserSchema.validate(req.body);
   if (error) {
     return res.status(400).json(error);
