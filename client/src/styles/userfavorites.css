@@ -17,7 +17,7 @@
   /* min-width: 600px; */
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.582);
-  padding: 24px 12px;
+  padding: 20px 20px;
 }
 
 .favorite-container img {
@@ -36,5 +36,9 @@
 @media screen and (max-width: 480px) {
   .favorite-container {
     width: calc(100% - 20px); /* Anpassa till 1 kolumn på ännu mindre skärmar */
+  }
+
+  .welcome-user {
+    display: none;
   }
 }
