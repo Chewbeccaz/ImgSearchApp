@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "../styles/userfavorites.css";
 
 export const UserFavorites = () => {
-  const { user } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
   const [favoriteImages, setFavoriteImages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -26,6 +28,24 @@ export const UserFavorites = () => {
     fetchUserFavorites();
   }, [user?.email]);
 
+  //Deletefunktionen
+  const removeFavoriteImage = async (image: string) => {
+    if (isAuthenticated && user) {
+      const url = `http://localhost:3000/users/${
+        user.email
+      }/favorites/${encodeURIComponent(image)}`;
+      try {
+        const response = await axios.delete(url);
+        console.log(response.data);
+        setFavoriteImages((prevFavorites) =>
+          prevFavorites.filter((img) => img !== image)
+        );
+      } catch (error) {
+        console.error("Fel vid borttagning av favoritbild", error);
+      }
+    }
+  };
+
   return (
     <>
       <h2>Dina favoritbilder</h2>
@@ -34,6 +54,11 @@ export const UserFavorites = () => {
           favoriteImages.map((image, index) => (
             <div key={index} className="favorite-container">
               <img src={image} alt={`Favorite Image ${index}`} />
+              <button
+                className="delete-button"
+                onClick={() => removeFavoriteImage(image)}>
+                <FontAwesomeIcon icon={faTrash} />
+              </button>
             </div>
           ))
         ) : (

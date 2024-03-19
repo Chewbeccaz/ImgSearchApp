@@ -60,4 +60,38 @@ app.post("/users", async (req, res) => {
   }
 });
 
+//Delete
+
+app.delete("/users/:userId/favorites/:imageId", async (req, res) => {
+  const { userId, imageId } = req.params;
+  console.log(
+    `Tar bort bild ${imageId} från favoriter för användare ${userId}`
+  );
+  try {
+    const data = await readFile("users.json", "utf8");
+    let users = JSON.parse(data);
+
+    const userIndex = users.findIndex((user) => user.userId === userId);
+    if (userIndex === -1) {
+      return res.status(404).send("Användaren hittades inte");
+    }
+
+    const user = users[userIndex];
+    const filteredFavorites = user.favorites.filter(
+      (favorite) => favorite !== imageId
+    );
+    user.favorites = filteredFavorites;
+
+    await writeFile("users.json", JSON.stringify(users, null, 2));
+    res
+      .status(200)
+      .send(
+        `Bilden med ID ${imageId} har tagits bort från användarens favoriter`
+      );
+  } catch (error) {
+    console.error("Fel vid borttagning av favoritbild", error);
+    res.status(500).send("Serverfel vid borttagning av favoritbild");
+  }
+});
+
 app.listen(3000, () => console.log("server is up"));
