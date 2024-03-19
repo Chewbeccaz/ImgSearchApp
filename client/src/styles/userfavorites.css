@@ -11,10 +11,9 @@
 
 .favorite-container {
   position: relative;
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
+  width: calc(33.33% - 10px);
+  margin-bottom: 30px;
   height: 500px;
-  /* min-width: 600px; */
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.582);
   padding: 20px 20px;
@@ -25,6 +24,10 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.favorite-container:hover {
+  transform: scale(1.05);
 }
 
 .delete-button {
@@ -40,13 +43,13 @@
 
 @media screen and (max-width: 768px) {
   .favorite-container {
-    width: calc(50% - 20px); /* Anpassa till 2 kolumner på mindre skärmar */
+    width: calc(50% - 20px);
   }
 }
 
 @media screen and (max-width: 480px) {
   .favorite-container {
-    width: calc(100% - 20px); /* Anpassa till 1 kolumn på ännu mindre skärmar */
+    width: calc(100% - 20px);
   }
 
   .welcome-user {
