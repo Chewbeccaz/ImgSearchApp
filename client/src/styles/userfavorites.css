@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 480px) {
   .favorite-container {
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
   }
 
   .welcome-user {
