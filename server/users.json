@@ -18,6 +18,8 @@
   },
   {
     "userId": "USER_ID",
-    "favorites": ["IMAGE_URL"]
+    "favorites": [
+      "IMAGE_URL"
+    ]
   }
 ]
