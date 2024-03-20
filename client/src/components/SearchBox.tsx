@@ -5,7 +5,6 @@ import { Image } from "../models/Image";
 import { SearchResult } from "./SearchResult";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-// import SearchResults from "./SearchResults"; //Varför måste jag importera såhär?
 
 export const SearchBox = () => {
   const [userSearch, setUserSearch] = useState("");
@@ -42,7 +41,6 @@ export const SearchBox = () => {
     handleSearch();
   };
 
-  //Gör En ny komponent av suggestedSearch?
   return (
     <>
       <div className="searchbox-container">
@@ -64,7 +62,6 @@ export const SearchBox = () => {
           onSuggestedSearch={handleSuggestedSearch}
         />
       )}
-      {/* <SearchResults images={searchResult} /> */}
       <SearchResult images={searchResult} searchTime={searchTime} />
     </>
   );

@@ -89,11 +89,7 @@ input::placeholder {
   color: white;
 }
 
-/* input[type="text"] {
-  padding-right: 80px; /* Lägger till utrymme för knappen */
-
 .searchbox-container {
-  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
