@@ -21,7 +21,6 @@ export const ImgSearchApp = () => {
           </div>
           <h1>Searchify</h1>
           <SearchBox />
-          {/* <LogoutButton /> */}
         </>
       ) : (
         <>

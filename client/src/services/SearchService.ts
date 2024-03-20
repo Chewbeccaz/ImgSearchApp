@@ -10,7 +10,7 @@ export const searchImages = async (userSearch: string) => {
       }&q=${userSearch}&searchType=image&num=10`
     );
 
-    console.log("Response data:", response.data); // För att logga ut objektet
+    console.log("Response data:", response.data);
     const formattedSearchTime =
       response.data.searchInformation.formattedSearchTime;
 
